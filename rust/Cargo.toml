@@ -1,0 +1,14 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "factory"
+path = "src/bin/creation-patterns/factory.rs"
+
+[[bin]]
+name = "abstract-factory"
+path = "src/bin/creation-patterns/abstract-factory.rs"
+
+[dependencies]
