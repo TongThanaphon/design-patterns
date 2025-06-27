@@ -27,4 +27,8 @@ path = "src/bin/creation-patterns/singleton.rs"
 name = "adapter"
 path = "src/bin/structual-patterns/adapter.rs"
 
+[[bin]]
+name = "bridge"
+path = "src/bin/structual-patterns/bridge.rs"
+
 [dependencies]
