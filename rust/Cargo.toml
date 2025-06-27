@@ -15,4 +15,16 @@ path = "src/bin/creation-patterns/abstract-factory.rs"
 name = "builder"
 path = "src/bin/creation-patterns/builder.rs"
 
+[[bin]]
+name = "prototype"
+path = "src/bin/creation-patterns/prototype.rs"
+
+[[bin]]
+name = "singleton"
+path = "src/bin/creation-patterns/singleton.rs"
+
+[[bin]]
+name = "adapter"
+path = "src/bin/structual-patterns/adapter.rs"
+
 [dependencies]
