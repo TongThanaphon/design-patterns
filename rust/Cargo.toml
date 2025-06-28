@@ -35,4 +35,12 @@ path = "src/bin/structual-patterns/bridge.rs"
 name = "composite"
 path = "src/bin/structual-patterns/composite.rs"
 
+[[bin]]
+name = "decorator"
+path = "src/bin/structual-patterns/decorator.rs"
+
+[[bin]]
+name = "facade"
+path = "src/bin/structual-patterns/facade.rs"
+
 [dependencies]
