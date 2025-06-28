@@ -31,4 +31,8 @@ path = "src/bin/structual-patterns/adapter.rs"
 name = "bridge"
 path = "src/bin/structual-patterns/bridge.rs"
 
+[[bin]]
+name = "composite"
+path = "src/bin/structual-patterns/composite.rs"
+
 [dependencies]
