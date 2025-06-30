@@ -1,27 +1,23 @@
 class Account {
-  private name: string;
-
-  constructor(name: string) {
+  constructor(name) {
     this.name = name;
   }
 
-  checkName(name: string): boolean {
+  checkName(name) {
     return this.name === name;
   }
 }
 
 class Wallet {
-  private balance: number;
-
   constructor() {
     this.balance = 0;
   }
 
-  deposit(amount: number): void {
+  deposit(amount) {
     this.balance += amount;
   }
 
-  withdraw(amount: number): void {
+  withdraw(amount) {
     if (this.balance >= amount) {
       this.balance -= amount;
     } else {
@@ -29,43 +25,36 @@ class Wallet {
     }
   }
 
-  getBalance(): number {
+  getBalance() {
     return this.balance;
   }
 }
 
 class SecurityCode {
-  private code: string;
-
-  constructor(code: string) {
+  constructor(code) {
     this.code = code;
   }
 
-  checkCode(code: string): boolean {
+  checkCode(code) {
     return this.code === code;
   }
 }
 
 class MyNotification {
-  notify(message: string): void {
+  notify(message) {
     console.log(`Notification: ${message}`);
   }
 }
 
 class WalletFacade {
-  private account: Account;
-  private wallet: Wallet;
-  private securityCode: SecurityCode;
-  private notification: MyNotification;
-
-  constructor(name: string, code: string) {
+  constructor(name, code) {
     this.account = new Account(name);
     this.wallet = new Wallet();
     this.securityCode = new SecurityCode(code);
     this.notification = new MyNotification();
   }
 
-  deposit(name: string, code: string, amount: number): void {
+  deposit(name, code, amount) {
     if (this.account.checkName(name) && this.securityCode.checkCode(code)) {
       this.wallet.deposit(amount);
       this.notification.notify(`Deposited ${amount} to ${name}'s wallet.`);
@@ -74,7 +63,7 @@ class WalletFacade {
     }
   }
 
-  withdraw(name: string, code: string, amount: number): void {
+  withdraw(name, code, amount) {
     if (this.account.checkName(name) && this.securityCode.checkCode(code)) {
       this.wallet.withdraw(amount);
       this.notification.notify(`Withdrew ${amount} from ${name}'s wallet.`);
@@ -83,7 +72,7 @@ class WalletFacade {
     }
   }
 
-  getBalance(name: string, code: string): number {
+  getBalance(name, code) {
     if (this.account.checkName(name) && this.securityCode.checkCode(code)) {
       return this.wallet.getBalance();
     } else {
@@ -93,7 +82,7 @@ class WalletFacade {
   }
 }
 
-function clientCode(wallet: WalletFacade) {
+function clientCode(wallet) {
   wallet.deposit("John", "1234", 100);
   wallet.deposit("John", "2222", 20);
 
