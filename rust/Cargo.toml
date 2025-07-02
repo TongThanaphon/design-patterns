@@ -43,4 +43,8 @@ path = "src/bin/structual-patterns/decorator.rs"
 name = "facade"
 path = "src/bin/structual-patterns/facade.rs"
 
+[[bin]]
+name = "proxy"
+path = "src/bin/structual-patterns/proxy.rs"
+
 [dependencies]
