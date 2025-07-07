@@ -47,4 +47,8 @@ path = "src/bin/structual-patterns/facade.rs"
 name = "proxy"
 path = "src/bin/structual-patterns/proxy.rs"
 
+[[bin]]
+name = "chain-of-responsibility"
+path = "src/bin/behavioral-patterns/chain-of-responsibility.rs"
+
 [dependencies]
